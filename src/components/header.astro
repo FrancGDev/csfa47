@@ -1,5 +1,6 @@
-<div class="bg-slate-800">
-    <header class="flex items-center justify-between text-white">
+<!-- <div class="sticky top-0 w-full z-10"> -->
+<div>
+    <header class="flex items-center justify-between text-white bg-zinc-950">
         <div class="flex items-center">
             <img src="logo.png" class="w-32 px-5 py-2" alt="logonacio" />
             <div>
@@ -7,42 +8,14 @@
                 <h2 class="text-2xl font-medium">Florentino Ameghino n47</h2>
             </div>
         </div>
-        <nav class="flex p-2">
-            <ul>
-                <li>
-                    <a
-                        href="#"
-                        class="text-sm font-bold px-6 py-2 mx-8 hover:bg-gray-900 hover:border-b-2 hover:border-white hover:rounded transition duration-400 ease-in-out"
-                    >
-                        Carreras</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#"
-                        class="text-sm font-bold px-6 py-2 mx-8 hover:bg-gray-900 hover:border-b-2 hover:border-white hover:rounded transition duration-400 ease-in-out"
-                    >
-                        Historia</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#"
-                        class="text-sm font-bold px-6 py-2 mx-8 hover:bg-gray-900 hover:border-b-2 hover:border-white hover:rounded transition duration-400 ease-in-out"
-                    >
-                        Contacto</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="#"
-                        class="text-sm font-bold px-6 py-2 mx-8 hover:bg-gray-900 hover:border-b-2 hover:border-white hover:rounded transition duration-400 ease-in-out"
-                    >
-                        Ubicación</a
-                    >
-                </li>
+        <nav class="self-end">
+            <ul class="flex p-2 [&>li>a]:px-8">
+                <li class="active" id="firstLink"><a href="#Niveles" class="scroll-link">Niveles</a></li>
+                <li><a href="#historia" class="scroll-link">Historia</a></li>
+                <li><a href="#Contacto" class="scroll-link">Contacto</a></li>
+                <li><a href="#Ubicación" class="scroll-link">Ubicación</a></li>
             </ul>
         </nav>
     </header>
-    <hr class="border-gray-600" />
+    <hr class="border-gray-500" />
 </div>
