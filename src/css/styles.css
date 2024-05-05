@@ -142,6 +142,7 @@ a {
 	transition: all 0.2s linear;
 }
 
+  
 /* a:hover {
 	color: #000;
 	text-decoration: none;
@@ -559,7 +560,6 @@ h2,
 	background: #fff;
 }
 
-.navbar-toggle {}
 
 .hero-text {
 	color: #ffffff;
@@ -660,7 +660,6 @@ h2,
 	border-radius: 0px;
 }
 
-.navbar-inverse .navbar-nav>.active {}
 
 .navbar-nav>li:hover>a {
 	color: #fff;
@@ -806,9 +805,7 @@ object {
 
 /* Features
     -------------------------------------------------*/
-#features h2 {}
 
-#features p {}
 
 .fetaure-details {
 	margin-bottom: 45px;
@@ -900,7 +897,6 @@ object {
 	padding-right: 8%;
 }
 
-.grid .grid-item {}
 
 .grid .text-content h5 {
 	font-weight: bold;
@@ -1194,7 +1190,6 @@ footer {
 }
 
 @media (max-width: 320px) {
-	.banner-container {}
 
 	.grid .text-content {
 		padding-left: 29%;
