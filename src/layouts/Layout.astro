@@ -21,7 +21,12 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
+		<script src="/src/components/scripts.js" type="text/javascript"></script>
 	</body>
 </html>
 
-<style is:global></style>
+<style is:global>
+	* {
+		scroll-behavior: smooth;
+	}
+</style>

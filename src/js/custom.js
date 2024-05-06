@@ -104,4 +104,3 @@ $('document').ready(function () {
     $(this).find('i').removeClass('fa-remove').addClass('fa-bars');
   });
 });
-
