@@ -16,13 +16,19 @@ import Layout from '../../layouts/Layout.astro';
         <section class="bg-blue-700 my-4">
             <h1>Invitación a estudiar alguna de las carreras</h1>
         </section>
-        <section class="m-4">
-            <h1 class="text-2xl font-semibold">Horarios</h1>
-            <div class="bg-blue-500 p-4 m-4 rounded-sm">Diseño Gráfico y Publicitario</div>
-            <div class="bg-blue-500 p-4 m-4 rounded-sm">Comercialización</div>
-            <div class="bg-blue-500 p-4 m-4 rounded-sm">Análisis Funcional de Sistemas Informáticos</div>
-            <div class="bg-blue-500 p-4 m-4 rounded-sm">Infraestructura de Tecnología de la Información</div>
-        </section>
-        <section class="bg-blue-400"><h1>Mesas de Examen</h1></section>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 xl:px-8 lg:px-6">
+            <div class="col-span-2">
+                <section class="m-4">
+                    <h1 class="text-2xl font-semibold">Horarios</h1>
+                    <div class="bg-blue-500 p-4 m-4 rounded-sm">Diseño Gráfico y Publicitario</div>
+                    <div class="bg-blue-500 p-4 m-4 rounded-sm">Comercialización</div>
+                    <div class="bg-blue-500 p-4 m-4 rounded-sm">Análisis Funcional de Sistemas Informáticos</div>
+                    <div class="bg-blue-500 p-4 m-4 rounded-sm">Infraestructura de Tecnología de la Información</div>
+                </section>
+                <section class="bg-blue-400"><h1>Mesas de Examen</h1></section>
+            </div>
+
+            <section class="bg-red-600">Novedades</section>
+        </div>
     </main>
 </Layout>
