@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="CSFA 47 - Terciario">
-    <main class="bg-zinc-900 h-screen w-full">
+    <main class="bg-zinc-900 h-full w-full">
         <header class="flex items-center justify-between text-white bg-zinc-800">
             <div class="flex items-center">
                 <img src="/public/logo.png" class="w-32 px-5 py-2" alt="logonacio" />
@@ -12,7 +12,7 @@ import Layout from '../../layouts/Layout.astro';
                     <h2 class="text-2xl font-medium">Florentino Ameghino n47</h2>
                 </div>
             </div>
-            <div class="px-8 flex justify-center items-center">
+            <div class="hidden md:flex px-8 justify-center items-center">
                 <img src="../../../public/FwRmR.png" alt="" class="h-24 pr-6" />
                 <audio controls>
                     <source src="https://https.nvradios.com/radio/9464/radio.mp3" type="audio/mpeg" />
@@ -24,14 +24,77 @@ import Layout from '../../layouts/Layout.astro';
         </section>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 xl:px-8 lg:px-6">
             <div class="col-span-2">
-                <section class="m-4">
+                <!-- <section class="m-4">
                     <h1 class="text-2xl font-semibold">Horarios</h1>
                     <div class="bg-blue-500 p-4 m-4 rounded-sm">Diseño Gráfico y Publicitario</div>
                     <div class="bg-blue-500 p-4 m-4 rounded-sm">Comercialización</div>
                     <div class="bg-blue-500 p-4 m-4 rounded-sm">Análisis Funcional de Sistemas Informáticos</div>
                     <div class="bg-blue-500 p-4 m-4 rounded-sm">Infraestructura de Tecnología de la Información</div>
+                </section> -->
+                <section class="">
+                    <h1 class="text-2xl font-semibold">Horarios</h1>
+                    <div class="text-base lg:text-lg">
+                        <div class="bg-blue-500 p-4 m-4 rounded-sm">
+                            <div class="flex justify-between items-center cursor-pointer toggle-content">
+                                <h2>Diseño Gráfico y Publicitario</h2>
+                                <i class="fa fa-chevron-down toggle-icon"></i>
+                            </div>
+                            <img
+                                src="../../../public/placeholder.webp"
+                                alt=""
+                                class="rounded"
+                                id="hiddenImage"
+                                style="display: none;"
+                            />
+                        </div>
+                        <div class="bg-blue-500 p-4 m-4 rounded-sm">
+                            <div class="flex justify-between items-center cursor-pointer toggle-content">
+                                <h2>Comercialización</h2>
+                                <i class="fa fa-chevron-down toggle-icon"></i>
+                            </div>
+                            <img
+                                src="../../../public/placeholder.webp"
+                                alt=""
+                                class="rounded"
+                                id="hiddenImage"
+                                style="display: none;"
+                            />
+                        </div>
+                        <div class="bg-blue-500 p-4 m-4 rounded-sm">
+                            <div class="flex justify-between items-center cursor-pointer toggle-content">
+                                <h2>Análisis Funcional de Sistemas Informáticos</h2>
+                                <i class="fa fa-chevron-down toggle-icon"></i>
+                            </div>
+                            <img
+                                src="../../../public/placeholder.webp"
+                                alt=""
+                                class="rounded"
+                                id="hiddenImage"
+                                style="display: none;"
+                            />
+                        </div>
+                        <div class="bg-blue-500 p-4 m-4 rounded-sm">
+                            <div class="flex justify-between items-center cursor-pointer toggle-content">
+                                <h2>Infraestructura de Tecnología de la Información</h2>
+                                <i class="fa fa-chevron-down toggle-icon"></i>
+                            </div>
+                            <img
+                                src="../../../public/placeholder.webp"
+                                alt=""
+                                class="rounded"
+                                id="hiddenImage"
+                                style="display: none;"
+                            />
+                        </div>
+                    </div>
                 </section>
-                <section class="bg-blue-400"><h1>Mesas de Examen</h1></section>
+                <section class="">
+                    <h1 class="text-2xl font-semibold py-4">Mesas de Examen</h1>
+                    <div class="flex h-screen px-8">
+                        <iframe src="../../../public/mesas/MESASFEBMARZO2022ANALISIS.pdf#navpanes=0" width="100%">
+                        </iframe>
+                    </div>
+                </section>
             </div>
 
             <section class="bg-red-600">Novedades</section>

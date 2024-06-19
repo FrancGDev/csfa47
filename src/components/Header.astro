@@ -1,91 +1,90 @@
 <!-- class="sticky top-0 w-full z-10"> -->
 <nav class="flex items-center justify-between text-white bg-zinc-800">
     <ul class="sidebar bg-zinc-700 font-bold">
-      <li onclick=hideSidebar() class="fa-solid fa-x py-4 px-8 text-xl"></li>
-      <li><a href="#Niveles" class="hover:bg-zinc-100 hover:text-black">Niveles</a></li>
-      <li><a href="#historia" class="hover:bg-zinc-100 hover:text-black">Historia</a></li>
-      <li><a href="#Contacto" class="hover:bg-zinc-100 hover:text-black">Contacto</a></li>
-      <li><a href="#Ubicación" class="hover:bg-zinc-100 hover:text-black">Ubicación</a></li>
+        <li onclick="hideSidebar()" class="fa-solid fa-x py-4 px-8 text-xl"></li>
+        <li><a href="#Niveles" class="hover:bg-zinc-100 hover:text-black">Niveles</a></li>
+        <li><a href="#historia" class="hover:bg-zinc-100 hover:text-black">Historia</a></li>
+        <li><a href="#Contacto" class="hover:bg-zinc-100 hover:text-black">Contacto</a></li>
+        <li><a href="#Ubicación" class="hover:bg-zinc-100 hover:text-black">Ubicación</a></li>
     </ul>
     <div class="flex items-center">
-      <img src="logo.png" class="w-32 px-5 py-2" alt="logonacio" />
-      <div>
-          <h2 class="text-2xl font-medium">Colegio superior</h2>
-          <h2 class="text-2xl font-medium">Florentino Ameghino n47</h2>
-      </div>
-      <div class="px-8 flex justify-center items-center">
-        <img src="../../../public/FwRmR.png" alt="" class="h-24 pr-6" />
-        <audio controls>
-            <source src="https://https.nvradios.com/radio/9464/radio.mp3" type="audio/mpeg" />
-        </audio>
+        <img src="logo.png" class="w-32 px-5 py-2" alt="logonacio" />
+        <div>
+            <h2 class="text-2xl font-medium">Colegio superior</h2>
+            <h2 class="text-2xl font-medium">Florentino Ameghino n47</h2>
+        </div>
+        <div class="px-8 flex justify-center items-center">
+            <img src="../../../public/FwRmR.png" alt="" class="h-24 pr-6" />
+            <audio controls>
+                <source src="https://https.nvradios.com/radio/9464/radio.mp3" type="audio/mpeg" />
+            </audio>
+        </div>
     </div>
-  </div>
-  <ul class="self-end text-lg">
-    <li class="hideOnMobile hover:underline hover:text-yellow-300 "><a href="#Niveles">Niveles</a></li>
-    <li class="hideOnMobile hover:underline hover:text-yellow-300 "><a href="#historia">Historia</a></li>
-    <li class="hideOnMobile hover:underline hover:text-yellow-300 "><a href="#Contacto">Contacto</a></li>
-    <li class="hideOnMobile hover:underline hover:text-yellow-300 "><a href="#Ubicación">Ubicación</a></li>
-  </ul>
-  <div class="menu-button fa-solid fa-bars text-3xl px-8" onclick=showSidebar()></div>
+    <ul class="self-end text-lg">
+        <li class="hideOnMobile hover:underline hover:text-yellow-300"><a href="#Niveles">Niveles</a></li>
+        <li class="hideOnMobile hover:underline hover:text-yellow-300"><a href="#historia">Historia</a></li>
+        <li class="hideOnMobile hover:underline hover:text-yellow-300"><a href="#Contacto">Contacto</a></li>
+        <li class="hideOnMobile hover:underline hover:text-yellow-300"><a href="#Ubicación">Ubicación</a></li>
+    </ul>
+
+    <div class="menu-button fa-solid fa-bars text-3xl px-8" onclick="showSidebar()"></div>
+
+    <style is:global>
+        nav {
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        nav li {
+            height: 50px;
+        }
+        nav a {
+            height: 100%;
+            padding: 0 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            background-color: rgba(9, 9, 11, 0.9);
+            backdrop-filter: blur(12px);
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        .sidebar li {
+            width: 100%;
+        }
+        .sidebar a {
+            width: 100%;
+        }
+        .menu-button {
+            display: none;
+        }
+        @media (max-width: 1000px) {
+            .hideOnMobile {
+                display: none;
+            }
+            .menu-button {
+                display: block;
+            }
+        }
+        @media (max-width: 400px) {
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
 </nav>
-
-
-<style is:global>
-
-nav{
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-}
-nav ul{
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-nav li{
-  height: 50px;
-}
-nav a{
-  height: 100%;
-  padding: 0 30px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
-.sidebar{
-  position: fixed;
-  top: 0; 
-  right: 0;
-  height: 100vh;
-  width: 250px;
-  background-color: rgba(9, 9, 11, 0.9);
-  backdrop-filter: blur(12px);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.sidebar li{
-  width: 100%;
-}
-.sidebar a{
-  width: 100%;
-}
-.menu-button{
-  display: none;
-}
-@media(max-width: 1000px){
-  .hideOnMobile{
-    display: none;
-  }
-  .menu-button{
-    display: block;
-  }
-}
-@media(max-width: 400px){
-  .sidebar{
-    width: 100%;
-  }
-}
-</style>

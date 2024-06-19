@@ -22,15 +22,7 @@ body {
 	-o-transition: all 0.3s linear;
 }
 
-::selection {
-	color: #fff;
-	background: #FFD500;
-}
 
-::-moz-selection {
-	color: #fff;
-	background: #FFD500;
-}
 
 
 
@@ -1252,37 +1244,3 @@ li.active a {
 	color: #fff;
 }
 
-#historia p {
-	color: #fff;
-}
-
-#historia .feature {
-	margin-top: 30px;
-	margin-bottom: 54px;
-}
-
-#historia .right {
-	padding-left: 32px;
-	float: right;
-}
-
-#historia .left {
-	padding-right: 32px;
-	float: left;
-}
-
-#historia h3 {
-	font: 18px/34px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: #222;
-}
-
-#historia .left {
-	padding-right: 32px;
-	float: left;
-}
-
-#historia .right {
-	float: right;
-}
