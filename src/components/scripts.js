@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 toggleIcon.classList.add("fa-chevron-down");
             }
 
-            // Centrar la sección en la pantalla
             section.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
     });
