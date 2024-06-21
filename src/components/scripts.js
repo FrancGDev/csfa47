@@ -11,10 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     toggleButtons.forEach(button => {
         button.addEventListener("click", function () {
+            const section = this.closest('.bg-blue-500');
             const hiddenContent = this.nextElementSibling;
             const toggleIcon = this.querySelector(".toggle-icon");
 
-            if (hiddenContent.style.display === "none") {
+            if (hiddenContent.style.display === "none" || hiddenContent.style.display === "") {
                 hiddenContent.style.display = "block";
                 toggleIcon.classList.remove("fa-chevron-down");
                 toggleIcon.classList.add("fa-chevron-up");
@@ -23,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 toggleIcon.classList.remove("fa-chevron-up");
                 toggleIcon.classList.add("fa-chevron-down");
             }
+
+            // Centrar la sección en la pantalla
+            section.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
     });
 });
