@@ -13,18 +13,9 @@ import Layout from '../../layouts/Layout.astro';
                 </div>
             </div>
         </header>
-        <section class="bg-blue-700 my-4">
-            <h1>Invitación a estudiar alguna de las carreras</h1>
-        </section>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 xl:px-8 lg:px-6">
+        <section class="m-4"></section>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 5:px-8 lg:px-6">
             <div class="col-span-2">
-                <!-- <section class="m-4">
-                    <h1 class="text-2xl font-semibold">Horarios</h1>
-                    <div class="bg-blue-500 p-4 m-4 rounded-sm">Diseño Gráfico y Publicitario</div>
-                    <div class="bg-blue-500 p-4 m-4 rounded-sm">Comercialización</div>
-                    <div class="bg-blue-500 p-4 m-4 rounded-sm">Análisis Funcional de Sistemas Informáticos</div>
-                    <div class="bg-blue-500 p-4 m-4 rounded-sm">Infraestructura de Tecnología de la Información</div>
-                </section> -->
                 <section class="">
                     <h1 class="text-2xl font-semibold">Horarios</h1>
                     <div class="text-base lg:text-lg">
@@ -84,9 +75,34 @@ import Layout from '../../layouts/Layout.astro';
                 </section>
                 <section class="">
                     <h1 class="text-2xl font-semibold py-4">Mesas de Examen</h1>
-                    <div class="flex h-screen px-8">
-                        <iframe src="../../../public/mesas/MESASFEBMARZO2022ANALISIS.pdf#navpanes=0" width="100%">
-                        </iframe>
+                    <div class="flex flex-col font-semibold">
+                        <div class="bg-blue-500 p-4 m-2 rounded-sm">
+                            <a
+                                href="../../../public/mesas/MESASFEBMARZO2022ANALISIS.pdf"
+                                class="flex justify-between items-center cursor-pointer toggle-content"
+                            >
+                                <h2>MESAS FEBRERO MARZO ANÁLISIS</h2>
+                                <i class="fa fa-chevron-right toggle-icon text-xl"></i>
+                            </a>
+                        </div>
+                        <div class="bg-blue-500 p-4 m-2 rounded-sm">
+                            <div class="flex justify-between items-center cursor-pointer toggle-content">
+                                <h2>MESAS FEBRERO MARZO ANÁLISIS</h2>
+                                <i class="fa fa-chevron-right toggle-icon text-xl"></i>
+                            </div>
+                        </div>
+                        <div class="bg-blue-500 p-4 m-2 rounded-sm">
+                            <div class="flex justify-between items-center cursor-pointer toggle-content">
+                                <h2>MESAS FEBRERO MARZO ANÁLISIS</h2>
+                                <i class="fa fa-chevron-right toggle-icon text-xl"></i>
+                            </div>
+                        </div>
+                        <div class="bg-blue-500 p-4 m-2 rounded-sm">
+                            <div class="flex justify-between items-center cursor-pointer toggle-content">
+                                <h2>MESAS FEBRERO MARZO ANÁLISIS</h2>
+                                <i class="fa fa-chevron-right toggle-icon text-xl"></i>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -96,6 +112,7 @@ import Layout from '../../layouts/Layout.astro';
                 <div class="flex justify-center text-3xl py-16">Próximamente</div>
             </section>
         </div>
+        <div></div>
         <a href="#top" class="topHome"><i class="fa fa-chevron-up text-4xl"></i></a>
         <section class="copyright flex justify-center">
             <div class="container">
