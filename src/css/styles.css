@@ -1034,15 +1034,6 @@ footer {
 	background: #000;
 }
 
-.social a:hover {
-	color: #818181;
-}
-
-.social a {
-	font-size: 32px;
-	margin: 0 10px;
-	color: #FFD500;
-}
 
 .contact ul li {
 	margin-bottom: 10px;

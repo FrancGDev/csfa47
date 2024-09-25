@@ -1,5 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import CollageTerciario from '../../components/CollageTerciario.astro';
+
+import analista from '../../assets/analista.jpg';
+import diseño from '../../assets/diseño.jpg';
+import infra from '../../assets/infra.jpg';
+import mkt from '../../assets/mkt.jpg';
 ---
 
 <Layout title="CSFA 47 - Terciario">
@@ -13,70 +20,159 @@ import Layout from '../../layouts/Layout.astro';
                 </div>
             </div>
         </header>
-        <section class="m-4"></section>
+        <section class="m-4 pb-10">
+            <div class="relative w-full max-w-4xl mx-auto">
+                <!-- Carousel container -->
+                <div class="overflow-hidden">
+                    <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Slide 1 -->
+                        <div class="flex-shrink-0 w-full flex flex-col sm:flex-row items-center">
+                            <Image
+                                src={analista}
+                                alt="A description of my image."
+                                class="w-3/4 sm:w-2/5 h-auto object-cover rounded-lg"
+                            />
+                            <div class="w-full sm:w-3/5 p-8">
+                                <h2 class="text-2xl font-bold mb-4">Análisis Funcional</h2>
+                                <h3 class="font-medium mb-4">
+                                    Título: Técnico Superior en Análisis Funcional de Sistemas Informáticos
+                                </h3>
+                                <p class="text-slate-400">
+                                    El Técnico Superior en Análisis Funcional de Sistemas Informáticos estará capacitado
+                                    para comprender e interpretar fines, negocios o actividades de una organización,
+                                    analizar los procesos que se llevan a cabo, averiguar las necesidades de
+                                    información, proponer mejoras, especificar requisitos de software, redactar manuales
+                                    y procedimientos, y apoyar la puesta en marcha de sistemas.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="flex-shrink-0 w-full flex flex-col sm:flex-row items-center">
+                            <Image
+                                src={diseño}
+                                alt="A description of my image."
+                                class="w-3/4 sm:w-2/5 h-auto object-cover rounded-lg"
+                            />
+                            <div class="w-full sm:w-3/5 p-8">
+                                <h2 class="text-2xl font-bold mb-4">Diseño Gráfico</h2>
+                                <h3 class="font-medium mb-4">
+                                    Título: Técnico Superior en Diseño Gráfico y Publicitario
+                                </h3>
+                                <p class="text-slate-400">
+                                    El objetivo de la carrera Técnico Superior en Diseño Gráfico y Publicitario es
+                                    preparar profesionales capaces de dar solución a problemas de comunicación gráfica,
+                                    a través de proyectos creativos y de calidad, sustentándose en los métodos y
+                                    fundamentos del diseño, así como en el dominio de herramientas tecnológicas de
+                                    vanguardia con sentido ético, humanista y profesional.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="flex-shrink-0 w-full flex flex-col sm:flex-row items-center">
+                            <Image
+                                src={infra}
+                                alt="A description of my image."
+                                class="w-3/4 sm:w-2/5 h-auto object-cover rounded-lg"
+                            />
+                            <div class="w-full sm:w-3/5 p-8">
+                                <h2 class="text-2xl font-bold mb-4">Infraestructura de redes</h2>
+                                <h3 class="font-medium mb-4">
+                                    Título: Técnico Superior en Infraestructura de la Tecnología de la Información
+                                </h3>
+                                <p class="text-slate-400">
+                                    El Técnico Superior en Infraestructura de Tecnología de la Información estará
+                                    capacitado para implementar, mantener, actualizar, analizar inconvenientes y
+                                    resolver problemas derivados de la operación de productos de tecnología de la
+                                    información que cumplen funciones de sistema operativo, administración de
+                                    almacenamiento, comunicaciones y redes, seguridad, bases de datos, y otros
+                                    subsistemas.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="flex-shrink-0 w-full flex flex-col sm:flex-row items-center">
+                            <Image
+                                src={mkt}
+                                alt="A description of my image."
+                                class="w-3/4 sm:w-2/5 h-auto object-cover rounded-lg"
+                            />
+                            <div class="w-full sm:w-3/5 p-8">
+                                <h2 class="text-2xl font-bold mb-4">Marketing Digital</h2>
+                                <h3 class="font-medium mb-4">Título: Técnico Superior en Comercialización</h3>
+                                <p class="text-slate-400">
+                                    El Técnico Sup. en Comercialización gradúa profesionales capacitados para tomar
+                                    decisiones referentes a la creación, desarrollo y promoción de determinado producto
+                                    y/o servicio así como también para desarrollar y gestionar negocios de una empresa
+                                    en los distintos mercados que sean de su interés, identificar las necesidades del
+                                    consumidor y generar las propuestas de valor para satisfacerlas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <button
+                    id="prevBtn"
+                    class="absolute top-1/2 left-0 transform -translate-y-1/2 sm:left-2 p-2 bg-blue-800/30 hover:bg-blue-800 text-white rounded-full sm:-translate-x-12"
+                >
+                    &#10094;
+                </button>
+                <button
+                    id="nextBtn"
+                    class="absolute top-1/2 right-0 transform -translate-y-1/2 sm:right-2 p-2 bg-blue-800/30 hover:bg-blue-800 text-white rounded-full sm:translate-x-12"
+                >
+                    &#10095;
+                </button>
+            </div>
+        </section>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 5:px-8 lg:px-6">
             <div class="col-span-2">
                 <section class="">
-                    <h1 class="text-2xl font-semibold">Horarios</h1>
-                    <div class="text-base lg:text-lg">
-                        <div class="bg-blue-500 p-4 m-4 rounded-sm" id="section-1">
-                            <div class="flex justify-between items-center cursor-pointer toggle-content">
-                                <h2>Diseño Gráfico y Publicitario</h2>
-                                <i class="fa fa-chevron-down toggle-icon"></i>
-                            </div>
-                            <img
-                                src="../../../public/placeholder.webp"
-                                alt=""
-                                class="rounded"
-                                id="hiddenImage"
-                                style="display: none"
-                            />
+                    <h1 class="text-2xl font-semibold py-2">Ver Horarios</h1>
+                    <div class="text-base flex flex-col font-medium">
+                        <div class="bg-blue-800 px-4 py-2 m-2 rounded-sm">
+                            <a
+                                href="../../../public/horarios/ANALISIS.pdf"
+                                class="flex justify-between items-center cursor-pointer toggle-content"
+                            >
+                                <h2>Análisis Funcional</h2>
+                                <i class="fa fa-chevron-right toggle-icon text-xl"></i>
+                            </a>
                         </div>
-                        <div class="bg-blue-500 p-4 m-4 rounded-sm" id="section-2">
-                            <div class="flex justify-between items-center cursor-pointer toggle-content">
+                        <div class="bg-blue-800 px-4 py-2 m-2 rounded-sm">
+                            <a
+                                href="../../../public/horarios/INFRAESTRUCTURA.pdf"
+                                class="flex justify-between items-center cursor-pointer toggle-content"
+                            >
+                                <h2>Infraestructura en Redes</h2>
+                                <i class="fa fa-chevron-right toggle-icon text-xl"></i>
+                            </a>
+                        </div>
+                        <div class="bg-blue-800 px-4 py-2 m-2 rounded-sm">
+                            <a
+                                href="../../../public/horarios/COMERCIALIZACION.pdf"
+                                class="flex justify-between items-center cursor-pointer toggle-content"
+                            >
                                 <h2>Comercialización</h2>
-                                <i class="fa fa-chevron-down toggle-icon"></i>
-                            </div>
-                            <img
-                                src="../../../public/placeholder.webp"
-                                alt=""
-                                class="rounded"
-                                id="hiddenImage"
-                                style="display: none"
-                            />
+                                <i class="fa fa-chevron-right toggle-icon text-xl"></i>
+                            </a>
                         </div>
-                        <div class="bg-blue-500 p-4 m-4 rounded-sm" id="section-3">
-                            <div class="flex justify-between items-center cursor-pointer toggle-content">
-                                <h2>Análisis Funcional de Sistemas Informáticos</h2>
-                                <i class="fa fa-chevron-down toggle-icon"></i>
-                            </div>
-                            <img
-                                src="../../../public/placeholder.webp"
-                                alt=""
-                                class="rounded"
-                                id="hiddenImage"
-                                style="display: none"
-                            />
-                        </div>
-                        <div class="bg-blue-500 p-4 m-4 rounded-sm" id="section-4">
-                            <div class="flex justify-between items-center cursor-pointer toggle-content">
-                                <h2>Infraestructura de Tecnología de la Información</h2>
-                                <i class="fa fa-chevron-down toggle-icon"></i>
-                            </div>
-                            <img
-                                src="../../../public/placeholder.webp"
-                                alt=""
-                                class="rounded"
-                                id="hiddenImage"
-                                style="display: none"
-                            />
+                        <div class="bg-blue-800 px-4 py-2 m-2 rounded-sm">
+                            <a
+                                href="../../../public/horarios/DISEÑO.pdf"
+                                class="flex justify-between items-center cursor-pointer toggle-content"
+                            >
+                                <h2>Diseño Gráfico</h2>
+                                <i class="fa fa-chevron-right toggle-icon text-xl"></i>
+                            </a>
                         </div>
                     </div>
                 </section>
-                <section class="">
-                    <h1 class="text-2xl font-semibold py-4">Mesas de Examen</h1>
-                    <div class="flex flex-col font-semibold">
-                        <div class="bg-blue-500 p-4 m-2 rounded-sm">
+                <section class="pt-4">
+                    <h1 class="text-2xl font-semibold py-2">Mesas De Examen</h1>
+                    <div class="flex flex-col font-medium">
+                        <div class="bg-blue-800 px-4 py-2 m-2 rounded-sm">
                             <a
                                 href="../../../public/mesas/MESASFEBMARZO2022ANALISIS.pdf"
                                 class="flex justify-between items-center cursor-pointer toggle-content"
@@ -85,34 +181,51 @@ import Layout from '../../layouts/Layout.astro';
                                 <i class="fa fa-chevron-right toggle-icon text-xl"></i>
                             </a>
                         </div>
-                        <div class="bg-blue-500 p-4 m-2 rounded-sm">
-                            <div class="flex justify-between items-center cursor-pointer toggle-content">
-                                <h2>MESAS FEBRERO MARZO ANÁLISIS</h2>
+                        <div class="bg-blue-800 px-4 py-2 m-2 rounded-sm">
+                            <a
+                                href="../../../public/mesas/MESASFEBMARZO2022INFRAESTRUCTURA.pdf"
+                                class="flex justify-between items-center cursor-pointer toggle-content"
+                            >
+                                <h2>MESAS FEBRERO MARZO INFRAESTRUCTURA</h2>
                                 <i class="fa fa-chevron-right toggle-icon text-xl"></i>
-                            </div>
+                            </a>
                         </div>
-                        <div class="bg-blue-500 p-4 m-2 rounded-sm">
-                            <div class="flex justify-between items-center cursor-pointer toggle-content">
-                                <h2>MESAS FEBRERO MARZO ANÁLISIS</h2>
+                        <div class="bg-blue-800 px-4 py-2 m-2 rounded-sm">
+                            <a
+                                href="../../../public/mesas/MESASFEBMARZO2022MKT.pdf"
+                                class="flex justify-between items-center cursor-pointer toggle-content"
+                            >
+                                <h2>MESAS FEBRERO MARZO COMERCIALIZACIÓN</h2>
                                 <i class="fa fa-chevron-right toggle-icon text-xl"></i>
-                            </div>
+                            </a>
                         </div>
-                        <div class="bg-blue-500 p-4 m-2 rounded-sm">
-                            <div class="flex justify-between items-center cursor-pointer toggle-content">
-                                <h2>MESAS FEBRERO MARZO ANÁLISIS</h2>
+                        <div class="bg-blue-800 px-4 py-2 m-2 rounded-sm">
+                            <a
+                                href="../../../public/mesas/MESASFEBMARZO2022DG.pdf"
+                                class="flex justify-between items-center cursor-pointer toggle-content"
+                            >
+                                <h2>MESAS FEBRERO MARZO DISEÑO GRÁFICO</h2>
                                 <i class="fa fa-chevron-right toggle-icon text-xl"></i>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </section>
             </div>
 
-            <section class="bg-zinc-800 text-center">
-                <h1 class="text-2xl font-semibold p-4">Novedades</h1>
-                <div class="flex justify-center text-3xl py-16">Próximamente</div>
+            <section class="bg-zinc-800 hidden justify-center items-start sm:flex">
+                <div class="text-center">
+                    <h1 class="text-2xl font-semibold p-4">Novedades</h1>
+                    <div class="text-2xl">Próximamente</div>
+                    <img
+                        src="https://www.gifsanimados.org/data/media/1356/herrero-y-obrero-metalurgico-imagen-animada-0007.gif"
+                        alt="Gif de herrero"
+                        width="200px"
+                        class="py-10"
+                    />
+                </div>
             </section>
         </div>
-        <div></div>
+        <CollageTerciario />
         <a href="#top" class="topHome"><i class="fa fa-chevron-up text-4xl"></i></a>
         <section class="copyright flex justify-center">
             <div class="container">
