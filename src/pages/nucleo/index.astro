@@ -12,40 +12,6 @@ import Layout from '../../layouts/Layout.astro';
                     <h2 class="text-2xl font-medium">Florentino Ameghino n47</h2>
                 </div>
             </div>
-            <style>
-                [class*='stacked--'] {
-                    position: relative;
-                    transition: transform 0.3s ease-in-out;
-                    will-change: transform;
-                }
-                [class*='stacked--']:before,
-                [class*='stacked--']:after {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    background-color: currentColor;
-                    transition: transform 0.3s ease-in-out;
-                    will-change: transform;
-                }
-                [class*='stacked--']:before {
-                    z-index: -1;
-                }
-                [class*='stacked--']:after {
-                    z-index: -2;
-                }
-                .stacked--up-right:hover {
-                    transform: translate(5px, -5px);
-                }
-                .stacked--up-right:hover:before {
-                    transform: translate(-5px, 5px);
-                }
-                .stacked--up-right:hover:after {
-                    transform: translate(-10px, 10px);
-                }
-            </style>
         </header>
         <div class="flex justify-center p-10">
             <h1 class="text-3xl">Pagina en desarrollo!</h1>
@@ -57,6 +23,5 @@ import Layout from '../../layouts/Layout.astro';
                 width="300px"
             />
         </div>
-
     </main>
 </Layout>
