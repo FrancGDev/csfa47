@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import NivelesEducativos from '../components/NivelesEducativos.astro';
 import { Image } from 'astro:assets';
+
+import imagenNacio from '../assets/20240524_110354.jpg';
 ---
 
 <Layout title="CSFA 47">
@@ -26,9 +28,12 @@ import { Image } from 'astro:assets';
 							Institución como “EL NACIO”, a través de innumerables generaciones de jóvenes.
 						</p>
 					</div>
-					<div class="six columns feature-media center px-4">
-						<img src="20240524_110354.jpg" alt="" class="rounded" />
-					</div>
+					<Image
+						src={imagenNacio}
+						alt="Imagen Nacio"
+						class="six columns feature-media center px-4 rounded-lg"
+						width="600"
+					/>
 				</div>
 			</div>
 		</section>
@@ -91,6 +96,7 @@ import { Image } from 'astro:assets';
 						style="border:0px; width: 700px; height: 450px; border-radius: 8px;"
 						allowfullscreen=""
 						loading="lazy"
+						title="dirección nacio"
 						class="mx-auto mt-4"></iframe>
 				</div>
 			</div>

@@ -32,28 +32,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-const carousel = document.getElementById('carousel');
-const slides = carousel.children.length;
-let index = 0;
+// const carousel = document.getElementById('carousel');
+// const slides = carousel.children.length;
+// let index = 0;
 
-function moveCarousel() {
-    index = (index + 1) % slides;
-    carousel.style.transition = 'transform 0.5s ease-in-out';
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-}
+// function moveCarousel() {
+//     index = (index + 1) % slides;
+//     carousel.style.transition = 'transform 0.5s ease-in-out';
+//     carousel.style.transform = `translateX(-${index * 100}%)`;
+// }
 
-const intervalId = setInterval(moveCarousel, 10000);
+// const intervalId = setInterval(moveCarousel, 10000);
 
-document.getElementById('nextBtn').addEventListener('click', () => {
-    clearInterval(intervalId);
-    moveCarousel();
-});
+// document.getElementById('nextBtn').addEventListener('click', () => {
+//     clearInterval(intervalId);
+//     moveCarousel();
+// });
 
-document.getElementById('prevBtn').addEventListener('click', () => {
-    clearInterval(intervalId);
-    index = (index - 1 + slides) % slides;
-    carousel.style.transition = 'transform 0.5s ease-in-out';
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-});
+// document.getElementById('prevBtn').addEventListener('click', () => {
+//     clearInterval(intervalId);
+//     index = (index - 1 + slides) % slides;
+//     carousel.style.transition = 'transform 0.5s ease-in-out';
+//     carousel.style.transform = `translateX(-${index * 100}%)`;
+// });
 
 
