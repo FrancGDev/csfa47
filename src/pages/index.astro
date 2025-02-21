@@ -10,33 +10,301 @@ import imagenNacio from '../assets/20240524_110354.jpg';
 <Layout title="CSFA 47">
 	<main class="bg-zinc-900 h-full w-full">
 		<Header />
-		<h1 class="text-5xl font-medium text-center pt-8">Colegio Superior N47 “Florentino Ameghino”</h1>
-		<h2 class="text-xl font-medium text-center py-4">Nivel Secundario, Terciario y Núcleo Rural</h2>
+		<h1 class="text-5xl font-medium text-center py-8">Colegio Superior N47 “Florentino Ameghino”</h1>
+		<h2 class="text-xl font-medium text-center">
+			Unidad Académica, política, Administrativa, Pedagógica y de Gestión
+		</h2>
+		<h3 class="text-base font-medium text-center py-4 max-w-[70%] mx-auto">
+			Las Escuelas Superiores Transferidas poseen unidad académica, política, administrativa, pedagógica y de
+			gestión. Su conducción se halla unificada en la figura del Rector, que es la máxima autoridad de toda la
+			institución. Sin embargo, cada nivel educativo cuenta con su respectivo equipo directivo. El Nivel Superior,
+			se encuentra a cargo directo del Rectorado y de la Regencia. El Nivel Secundario se encuentra a cargo del
+			Director del propio nivel, secundado por sus Vicedirectores, que operan bajo su órbita jerárquica.
+		</h3>
 		<NivelesEducativos />
 		<hr class="border-gray-500" />
-		<section id="historia" class="flex justify-center">
-			<div class="container">
-				<div class="row feature design">
-					<div class="six columns right pr-4">
-						<h2 class="text-4xl">"EL NACIO"</h2>
-						<p class="text-xl">
-							El Colegio Superior Nº 47 “Florentino Ameghino” tiene una larga trayectoria en nuestra
-							ciudad y la zona. En 1930, Don Alfredo Saybene, propuso la creación de un Instituto de
-							Enseñanza Media que posibilitara a los jóvenes cursar el Bachillerato sin necesidad de
-							trasladarse a Rosario. En 1931 inicia sus actividades con el nombre de Instituto Incorporado
-							Florentino Ameghino y, en 1936, toma el nombre de Colegio Nacional, identidad que marca a la
-							Institución como “EL NACIO”, a través de innumerables generaciones de jóvenes.
-						</p>
+		<section id="contenido" class="my-8">
+			<div class="container mx-auto h-full">
+				<!-- Pestañas de selección -->
+				<div class="flex border-b border-gray-500">
+					<button id="tab-historia" class="px-4 py-2 focus:outline-none" onclick="mostrarTab('historia')">
+						Historia
+					</button>
+					<button
+						id="tab-autoridades"
+						class="px-4 py-2 focus:outline-none"
+						onclick="mostrarTab('autoridades')"
+					>
+						Autoridades
+					</button>
+					<button id="tab-profesores" class="px-4 py-2 focus:outline-none" onclick="mostrarTab('profesores')">
+						Profesores
+					</button>
+				</div>
+
+				<!-- Contenedor de contenido con scroll interno -->
+				<div class="tab-content overflow-y-auto p-4">
+					<!-- Contenido de Historia -->
+					<div id="contenido-historia" class="tab-pane">
+						<div class="flex flex-col md:flex-row">
+							<div class="md:w-1/2 px-4 flex flex-col justify-start">
+								<h2 class="text-4xl mb-4">"EL NACIO"</h2>
+								<p class="text-xl text-justify">
+									El Colegio Superior Nº 47 “Florentino Ameghino” tiene una larga trayectoria en
+									nuestra ciudad y la zona. En 1930, Don Alfredo Saybene propuso la creación de un
+									Instituto de Enseñanza Media que posibilitara a los jóvenes cursar el Bachillerato
+									sin necesidad de trasladarse a Rosario. En 1931 inicia sus actividades con el nombre
+									de Instituto Incorporado Florentino Ameghino y, en 1936, toma el nombre de Colegio
+									Nacional, identidad que marca a la Institución como “EL NACIO”, a través de
+									innumerables generaciones de jóvenes.
+								</p>
+								<a
+									href="https://sites.google.com/site/047sitioinstitucional2013/recordando-nuestra-historia"
+									target="_blank"
+									class="mt-4 px-6 py-2 bg-zinc-700 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 text-center w-max"
+								>
+									Saber más
+								</a>
+							</div>
+							<div class="md:w-1/2 px-4 flex items-start">
+								<Image src={imagenNacio} alt="Imagen Nacio" class="rounded-lg" width="600" />
+							</div>
+						</div>
 					</div>
-					<Image
-						src={imagenNacio}
-						alt="Imagen Nacio"
-						class="six columns feature-media center px-4 rounded-lg"
-						width="600"
-					/>
+
+					<div id="contenido-autoridades" class="hidden">
+						<h2 class="text-4xl mb-4">Autoridades</h2>
+						<ul class="list-none text-lg space-y-2">
+							<li><span class="font-bold text-blue-400">Rectora:</span> Lic. Gabriela Iannantuoni</li>
+							<li><span class="font-bold text-blue-400">Secretaria:</span> Lic. Silvia Polinari</li>
+							<li>
+								<span class="font-bold text-blue-400">Regente del Nivel Terciario:</span> Prof. Paula Milazzo
+							</li>
+							<li>
+								<span class="font-bold text-blue-400">Directora del Nivel Secundario:</span> Prof. Daniela
+								Almeyda
+							</li>
+							<li>
+								<span class="font-bold text-blue-400"
+									>Vicedirectora Turno Mañana del Nivel Secundario:</span
+								> Prof. Antonella Caronni
+							</li>
+							<li>
+								<span class="font-bold text-blue-400"
+									>Vicedirectora Turno Tarde del Nivel Secundario:</span
+								> Prof. Graciela Solobú
+							</li>
+
+							<li class="mt-4">
+								<span class="font-bold text-blue-400">Consejo Académico del Nivel Terciario:</span>
+							</li>
+							<ul class="list-disc pl-10">
+								<li>
+									<span class="font-bold text-blue-400">Análisis Funcional:</span> Prof. Leandro Gomez
+								</li>
+								<li>
+									<span class="font-bold text-blue-400">Comercialización:</span> Prof. Natalia Viotto
+								</li>
+								<li>
+									<span class="font-bold text-blue-400">Infraestructura:</span> Prof. Pablo Testasecca
+								</li>
+								<li>
+									<span class="font-bold text-blue-400">Diseño Gráfico:</span> Prof. Marisa Varela
+								</li>
+							</ul>
+
+							<li class="mt-4">
+								<span class="font-bold text-blue-400">Consejo Asesor del Nivel Secundario:</span>
+							</li>
+							<ul class="list-disc pl-10">
+								<li>Prof. Bárbara Balich</li>
+								<li>Prof. Carolina Torresi</li>
+								<li>Prof. Carlos Gordillo</li>
+								<li>Prof. Evelin Medina</li>
+								<li>Prof. Gabriela Bortolatto</li>
+								<li>Prof. Gerardo Scrivano</li>
+								<li>Prof. María José Bellini</li>
+							</ul>
+						</ul>
+					</div>
+					<div id="contenido-profesores" class="hidden">
+						<h2 class="text-4xl mb-4">Listado de Profesores</h2>
+						<div class="max-h-[80vh] overflow-y-auto">
+							<ul class="list-disc list-inside text-base columns-1 md:columns-2 lg:columns-3 space-y-2">
+								<li>ABADIE, María de los Ángeles</li>
+								<li>ALMEYDA, Daniela Ana</li>
+								<li>ALVAREZ, Gustavo</li>
+								<li>ANDREACCHI, Marcos</li>
+								<li>ANTICINI, Mara</li>
+								<li>ARBUSTI, Melina</li>
+								<li>AVOLEDO, María Laura</li>
+								<li>BAGNOLI, Gabriela</li>
+								<li>BALICH, Barbara</li>
+								<li>BALSA, Fernando</li>
+								<li>BARBARÁ, Julieta</li>
+								<li>BAZZI, Luciana</li>
+								<li>BELTRAMO, María Angélica</li>
+								<li>BENEDETTI, Aurora</li>
+								<li>BERARDO, Belén</li>
+								<li>BETTATI, Mariana</li>
+								<li>BISTACCO, Gina</li>
+								<li>BORDA, Gisela</li>
+								<li>BORTOLATO, Gabriela Vanina</li>
+								<li>BRAGALENTI, Darío</li>
+								<li>BRUN, Cintia</li>
+								<li>CABELLO, Francisco</li>
+								<li>CABRAL MUNARRIZ, Lorena</li>
+								<li>CÁCERES, Sandra</li>
+								<li>CALCAGNI, Ariadna</li>
+								<li>CAMPAGNARO, Julia</li>
+								<li>CAPRIOTTI, Paola</li>
+								<li>CARBONARI, Sandra</li>
+								<li>CARONNI, Antonella</li>
+								<li>CARRADORI, Viviana</li>
+								<li>CARRERA, Florencia</li>
+								<li>CAVALLIN, Elina</li>
+								<li>CAVALLONE, Érica</li>
+								<li>CERRANO, Silvia</li>
+								<li>CHAVEZ, Daniela</li>
+								<li>CHIRINO, Lucila</li>
+								<li>COCCHIARELLA, Mauricio</li>
+								<li>D´ASCANIO, Patricia</li>
+								<li>DE JULIES, Carolina</li>
+								<li>DEMARCHI, Julieta</li>
+								<li>DIEZ, Natalia</li>
+								<li>DOVETTA, Denise</li>
+								<li>DOVETTA, M. Alejandra</li>
+								<li>DULON, Natacha</li>
+								<li>FALAPPA, Carolina</li>
+								<li>FERRERO, Carolina</li>
+								<li>FLESLER, Gisele</li>
+								<li>GALLARDO, Matías</li>
+								<li>GASTALDI, Virginia</li>
+								<li>GATTI, Natalia</li>
+								<li>GIACOVERO, Carolina</li>
+								<li>GIOMO, Catalina</li>
+								<li>GIULIANI, Antonela</li>
+								<li>GÓMEZ, Leandro</li>
+								<li>GÓMEZ, Stella Maris</li>
+								<li>GÓNGORA, Soledad</li>
+								<li>GONZÁLEZ, Germán</li>
+								<li>GRANDIS, Silvana</li>
+								<li>GUEDON, José</li>
+								<li>GUZMAROLI, Uriel</li>
+								<li>HASSAN, Marcela</li>
+								<li>JUNCOS, Luciano</li>
+								<li>LA POLLA, Silvia</li>
+								<li>LANCIONI, Natalia</li>
+								<li>LAZOS, Joel</li>
+								<li>LOSANO, Andrea</li>
+								<li>LUDUEÑA, Uriel</li>
+								<li>MACAT, Federico</li>
+								<li>MANGATERRA, Fernando</li>
+								<li>MANZI, Daniel</li>
+								<li>MARANGHELLO, Ma. Verónica</li>
+								<li>MARTINEZ, Flavia</li>
+								<li>MECONI, Antonella</li>
+								<li>MEDINA, Laureano</li>
+								<li>MELIS, Luciana</li>
+								<li>MELIS, Verónica</li>
+								<li>MENDOZA, Patricia Verónica</li>
+								<li>MENGHI, Lorena</li>
+								<li>MILANO GRASSI, Juan Pablo</li>
+								<li>MILAZZO, Paula</li>
+								<li>MIRAGLIO, Marcela</li>
+								<li>MOLINA, María Virginia</li>
+								<li>MONTOYA, Vanina</li>
+								<li>MORO, Natalia</li>
+								<li>MORONI, Lucas</li>
+								<li>MOSCATELLI, María Fernanda</li>
+								<li>MUÑOZ, Selene</li>
+								<li>NADAL, Macarena</li>
+								<li>ODASSO, Facundo</li>
+								<li>OLIVANTI, Javier Ezequiel</li>
+								<li>OLMOS, Juan José</li>
+								<li>OSELLA, Carina</li>
+								<li>PALAZZESI, María Emilia</li>
+								<li>PALOMBARINI, Natalia</li>
+								<li>PASCHERO, Betiana</li>
+								<li>PASCHIERO, Valeria</li>
+								<li>PASCUAL, Erika</li>
+								<li>PELLEGRINI, Manuela</li>
+								<li>PENESSI, Cecilia</li>
+								<li>PENESSI, Natalia</li>
+								<li>PERDOMO, Ornella</li>
+								<li>PÉREZ, Andrés</li>
+								<li>PEREZ, Claudia</li>
+								<li>PERRONE, Lucía</li>
+								<li>PIGINI, Adriana</li>
+								<li>POLINARI, Silvia</li>
+								<li>PUPPO, Paula Verónica</li>
+								<li>RACHED, Agustín</li>
+								<li>REY, Gabriela</li>
+								<li>RIGHETTI, Soraya</li>
+								<li>RIGONI, José Luis</li>
+								<li>RODRÍGUEZ, Fabián</li>
+								<li>ROGANI, Ludmila</li>
+								<li>ROLDÁN, Carla</li>
+								<li>ROMAGNOLI, Ariel</li>
+								<li>ROMÁN, Gonzalo</li>
+								<li>ROSSI, Betina</li>
+								<li>RUFFINI, Gabriela</li>
+								<li>RUSCONI, Mariela</li>
+								<li>SALESSI, Anabela</li>
+								<li>SAN DÁMASO, Natalia</li>
+								<li>SANTILLAN VALENZUELA, Sabrina</li>
+								<li>SCIPIONI, Melina</li>
+								<li>SCISCIANI, Isabela</li>
+								<li>SCRINZI, Emelí</li>
+								<li>SCRIVANO, Gabriela Alejandra</li>
+								<li>SCRIVANO, Gerardo</li>
+								<li>SCUOTRI, Carla</li>
+								<li>SISIANI, María Gisela</li>
+								<li>SLOBODIUK, Griselda</li>
+								<li>SOLOBU, Graciela</li>
+								<li>SOSA, Aneley</li>
+								<li>SUAREZ, Denise</li>
+								<li>SUAREZ, Eliana</li>
+								<li>TAGLIANI, Martín</li>
+								<li>TERRANEO, Valeria</li>
+								<li>TESTASECCA, Pablo</li>
+								<li>TETTAMANTI, Miriam</li>
+								<li>TOMBESI, Ma. Fernanda</li>
+								<li>TONELLI, Juan</li>
+								<li>TORESI, Javier</li>
+								<li>TORRESI, Carolina Isabel</li>
+								<li>TURCHETTI, Marcelo</li>
+								<li>ULLUA, María Eugenia</li>
+								<li>VARELA, Marisa</li>
+								<li>VARONE, Gabriela</li>
+								<li>VASCONI, Silvia</li>
+								<li>VENIER, Loreley</li>
+								<li>VIOTTO, Natalia</li>
+								<li>VIRGILLI, Guillermo</li>
+								<li>VOLENTIERA, Fabiana</li>
+								<li>WESKAMP, María Julia</li>
+								<li>YUCOVSKY, Analía</li>
+								<li>ZADRA, Cecilia</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
+
+		<script is:inline>
+			function mostrarTab(tab) {
+				const tabs = ['historia', 'autoridades', 'profesores'];
+				tabs.forEach((t) => {
+					document.getElementById('contenido-' + t).classList.add('hidden');
+					document.getElementById('tab-' + t).classList.remove('border-b-2', 'border-blue-500');
+				});
+				document.getElementById('contenido-' + tab).classList.remove('hidden');
+				document.getElementById('tab-' + tab).classList.add('border-b-2', 'border-blue-500');
+			}
+
+			mostrarTab('historia');
+		</script>
 		<section id="Contacto" class="">
 			<hr class="border-gray-500" />
 			<div class="flex justify-center">
